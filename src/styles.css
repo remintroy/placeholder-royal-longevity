@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Manrope:wght@400;500;600&display=swap');
+
+:root {
+  font-family: 'Manrope', sans-serif;
+  color: #f2eee2;
+  background: #142c25;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+* { box-sizing: border-box; }
+body { margin: 0; }
+.page {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  background: radial-gradient(ellipse at 50% 42%, #284337 0%, #172f27 43%, #10261f 100%);
+}
+.page::after {
+  content: '';
+  position: absolute;
+  inset: 15px;
+  border: 1px solid #cbb78920;
+  pointer-events: none;
+}
+.header { display: flex; align-items: center; justify-content: space-between; padding: 42px 6%; z-index: 1; }
+.brand { display: flex; align-items: center; gap: 13px; color: #eee8d8; text-decoration: none; font-size: 19px; letter-spacing: 5px; line-height: 1.5; }
+.brand-second { display: block; font-size: 9px; letter-spacing: 3.2px; }
+.brand-crown { width: 43px; height: 43px; stroke: #d1bb88; stroke-width: 1.6; }
+.header-note { font-size: 9px; letter-spacing: 3px; color: #c7cbbb; }
+main { position: relative; flex: 1; display: flex; min-height: 620px; align-items: center; justify-content: center; padding: 70px 24px 120px; }
+.hero { z-index: 1; text-align: center; animation: enter 1.2s ease-out both; }
+.status { display: flex; justify-content: center; align-items: center; gap: 10px; color: #d7c596; font-size: 9px; letter-spacing: 2.8px; line-height: 1.8; }
+.status > span { width: 5px; height: 5px; border-radius: 50%; background: #d7c596; box-shadow: 0 0 15px #d7c59670; flex-shrink: 0; }
+h1 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(62px, 7.6vw, 112px); font-weight: 400; line-height: .99; letter-spacing: -3.5px; margin: 33px 0 28px; }
+h1 em { font-weight: 400; color: #d5c292; }
+.intro { font-size: 13px; line-height: 1.9; color: #c2c9bd; letter-spacing: .3px; }
+.coming-soon { margin: 40px auto 0; display: flex; align-items: center; justify-content: center; gap: 21px; }
+.coming-soon h2 { font-size: 11px; font-weight: 500; letter-spacing: 4px; text-transform: uppercase; }
+.line { width: 42px; height: 1px; background: #ccb68870; }
+.invitation { margin-top: 12px; color: #aab6a8; font-size: 11px; letter-spacing: .3px; }
+.orbital-art { position: absolute; width: 680px; height: 680px; top: 47%; left: 50%; transform: translate(-50%, -50%); pointer-events: none; }
+.orbit { position: absolute; border: 1px solid #ccb6880c; border-radius: 50%; inset: 0; }
+.orbit-two { inset: 36px; border-color: #ccb68813; }
+.orbit-three { inset: 75px; border-color: #ccb6880b; }
+.orb { width: 7px; height: 7px; background: #a58e5c; border-radius: 50%; position: absolute; top: 99px; right: 99px; opacity: .5; box-shadow: 0 0 25px #cbb78970; }
+.bottom-mark { position: absolute; bottom: 36px; display: flex; align-items: center; gap: 16px; opacity: .65; }
+.bottom-mark svg { width: 23px; height: 23px; stroke: #cbb789; stroke-width: 1.4; }
+.bottom-mark span { height: 1px; width: 55px; background: #cbb78940; }
+footer { margin: 0 6%; padding: 24px 0 33px; border-top: 1px solid #cbb78924; display: flex; justify-content: space-between; gap: 20px; font-size: 9px; color: #a3b0a3; letter-spacing: .4px; z-index: 1; }
+.footer-motto { color: #c3b58f; font-size: 8px; letter-spacing: 2.5px; }
+.brand:focus-visible { outline: 2px solid #d5c292; outline-offset: 8px; }
+@keyframes enter { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+@media (max-width: 600px) {
+  .header { padding: 34px 30px; }
+  .header-note { display: none; }
+  main { min-height: 580px; padding: 60px 26px 110px; }
+  .status { font-size: 8px; letter-spacing: 1.5px; max-width: 270px; margin: auto; }
+  h1 { font-size: clamp(54px, 12.5vw, 75px); letter-spacing: -2px; line-height: 1.08; }
+  .orbital-art { width: 530px; height: 530px; }
+  footer { flex-wrap: wrap; justify-content: center; margin: 0 30px; gap: 12px 20px; text-align: center; }
+  .footer-motto { order: -1; width: 100%; margin-bottom: 4px; }
+}
+@media (prefers-reduced-motion: reduce) { .hero { animation: none; } }
