@@ -7,31 +7,28 @@ function App() {
     <div className="page">
       <header className="header">
         <a className="brand" href="/" aria-label="Royal Longevity home">
-          <img className="brand-icon" src="/icon-gold.png" alt="" width="56" height="56" />
-          <img className="brand-wordmark" src="/text-english-white.svg" alt="Royal Longevity" width="260" height="18" />
+          <img src="/text-english-white.svg" alt="Royal Longevity" width="260" height="18" />
         </a>
-        <span className="header-note">A LIFE WELL LIVED.</span>
+        <span className="edition">A NEW CHAPTER</span>
       </header>
 
       <main>
-        <div className="orbital-art" aria-hidden="true">
-          <div className="orbit orbit-one" /><div className="orbit orbit-two" />
-          <div className="orbit orbit-three" /><div className="orb" />
-        </div>
-        <section className="hero" aria-labelledby="headline">
-          <div className="status"><span /> SOMETHING EXTRAORDINARY IS TAKING SHAPE</div>
-          <h1 id="headline">More life.<br /><em>More possibility.</em></h1>
-          <p className="intro">A new chapter in living well.<br />Thoughtfully crafted. Worth the wait.</p>
-          <div className="coming-soon"><span className="line" /><h2>Coming soon</h2><span className="line" /></div>
-          <p className="invitation">We look forward to welcoming you.</p>
+        <section className="intro" aria-labelledby="headline">
+          <p className="eyebrow">ROYAL LONGEVITY · COMING SOON</p>
+          <h1 id="headline">Good things<br />take time<span>.</span></h1>
+          <div className="message">
+            <span className="rule" aria-hidden="true" />
+            <p>We’re taking a little time<br />to create something lasting.</p>
+          </div>
         </section>
-        <div className="bottom-mark" aria-hidden="true"><span /><img src="/icon-gold.png" alt="" width="32" height="32" /><span /></div>
+        <div className="emblem">
+          <img src="/icon-gold.png" alt="" width="500" height="500" />
+        </div>
       </main>
 
       <footer>
         <span>© {new Date().getFullYear()} Royal Longevity</span>
-        <span className="footer-motto">THE ART OF LIVING WELL</span>
-        <span>All rights reserved.</span>
+        <span className="footer-note">In good time.</span>
       </footer>
     </div>
   );
