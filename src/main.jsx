@@ -2,23 +2,13 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 import './styles.css';
 
-function Crown({ className = '' }) {
-  return (
-    <svg className={className} viewBox="0 0 64 64" fill="none" aria-hidden="true">
-      <path d="m12 21 11 10L32 13l9 18 11-10-6 24H18Z" />
-      <path d="M20 52h24" />
-      <circle cx="12" cy="18" r="2" /><circle cx="32" cy="10" r="2" /><circle cx="52" cy="18" r="2" />
-    </svg>
-  );
-}
-
 function App() {
   return (
     <div className="page">
       <header className="header">
         <a className="brand" href="/" aria-label="Royal Longevity home">
-          <Crown className="brand-crown" />
-          <span>ROYAL<span className="brand-second">LONGEVITY</span></span>
+          <img className="brand-icon" src="/icon-gold.png" alt="" width="56" height="56" />
+          <img className="brand-wordmark" src="/text-english-white.svg" alt="Royal Longevity" width="260" height="18" />
         </a>
         <span className="header-note">A LIFE WELL LIVED.</span>
       </header>
@@ -35,7 +25,7 @@ function App() {
           <div className="coming-soon"><span className="line" /><h2>Coming soon</h2><span className="line" /></div>
           <p className="invitation">We look forward to welcoming you.</p>
         </section>
-        <div className="bottom-mark" aria-hidden="true"><span /><Crown /><span /></div>
+        <div className="bottom-mark" aria-hidden="true"><span /><img src="/icon-gold.png" alt="" width="32" height="32" /><span /></div>
       </main>
 
       <footer>
